@@ -16,7 +16,7 @@ class CUlamek
 
     CUlamek(int l, int m)
     {
-        licznik = 1;
+        licznik = l;
         if(m==0) mianownik = 1;
         else mianownik = m;
     }
@@ -38,8 +38,16 @@ int main()
 {
     CUlamek A;
     CUlamek B(2,3);
-    cout << A.Wartosc() << " " << B.Wartosc() << endl;
-    B.Wypisz();
+    CUlamek C;
+
+    C.UstawLicznik(5);
+    C.UstawMianownik(2);
+
+    cout << A.Wartosc() << " " << B.Wartosc() << " " << C.Wartosc() << endl;
+
     A.Wypisz();
+    B.Wypisz();
+    C.Wypisz();
+
     return 0;
 }
