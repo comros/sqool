@@ -2,52 +2,65 @@
 
 using namespace std;
 
-class CUlamek
+class Ulamek
 {
     private:
     int licznik, mianownik;
 
     public:
-    CUlamek()
+    Ulamek()
     {
+        // Konstruktor ustawia domyślne wartości w przypadku nie ustawienia ich
         licznik = 0;
         mianownik = 1;
     }
 
-    CUlamek(int l, int m)
+    Ulamek(int l, int m)
     {
+        // Przeładowanie konstruktora umożliwia ustawienie zmiennych przy stworzeniu obiektu
         licznik = l;
         if(m==0) mianownik = 1;
         else mianownik = m;
     }
 
-    double Wartosc() { return (double)licznik/mianownik; }
+    // Wypisuje ułamek dziesiętny
+    double WartoscUlamka() { return (double)licznik/mianownik; }
 
+    // Ustawia wartość licznika
     void UstawLicznik (int l) { licznik = l; }
 
+    // Ustawia wartosć mianownika różną od 0
     void UstawMianownik (int m)
     {
         if(m == 0) mianownik = 1;
         else mianownik = m;
     }
 
-    void Wypisz() { cout << licznik << "/" << mianownik << endl; }
+    // Wypisuje ułamek zwykły
+    void WypiszUlamek() { cout << licznik << "/" << mianownik; }\
+
+    // Wizualizuje równanie zamiany ułamka zwykłego na dziesiętny
+    void Rownanie()
+    {
+        WypiszUlamek();
+        cout << " = " << Wartosc() << endl;
+    }
 };
 
 int main()
 {
-    CUlamek A;
-    CUlamek B(2,3);
-    CUlamek C;
+    // Wywołanie klasy na 3 możliwe sposoby
+    Ulamek uA;
+    Ulamek uB(2,3);
+    Ulamek uC;
 
-    C.UstawLicznik(5);
-    C.UstawMianownik(2);
+    uC.UstawLicznik(5);
+    uC.UstawMianownik(2);
 
-    cout << A.Wartosc() << " " << B.Wartosc() << " " << C.Wartosc() << endl;
+    uA.Rownanie();
+    uB.Rownanie();
+    uC.Rownanie();
 
-    A.Wypisz();
-    B.Wypisz();
-    C.Wypisz();
 
     return 0;
 }
