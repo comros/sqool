@@ -1,1 +1,2 @@
-# sqool2115
+# Sqool
+Repozytorium na zadania szkolne.
