@@ -37,13 +37,13 @@ class Ulamek
     }
 
     // Wypisuje ułamek zwykły
-    void WypiszUlamek() { cout << licznik << "/" << mianownik; }\
+    void WypiszUlamek() { cout << licznik << "/" << mianownik; }
 
     // Wizualizuje równanie zamiany ułamka zwykłego na dziesiętny
     void Rownanie()
     {
         WypiszUlamek();
-        cout << " = " << Wartosc() << endl;
+        cout << " = " << WartoscUlamka() << endl;
     }
 };
 
@@ -60,7 +60,6 @@ int main()
     uA.Rownanie();
     uB.Rownanie();
     uC.Rownanie();
-
 
     return 0;
 }
