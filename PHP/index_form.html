@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Obsługa formularzy</title>
+    <meta charset="UTF-8">
+    <style>
+        body 
+        { 
+            background-color: rgb(41, 40, 40);
+            text-align: center;
+            color: white;    
+        }
+        fieldset
+        {
+            display: inline-block;
+            width: 35vh;
+    
+        }
+        .main
+        {
+            background-color: rgb(58, 58, 58);
+            display: inline-block;
+            width: 75vh;
+            height: 95vh;
+            box-shadow: .75vh .5vh .5vh black
+        }
+        h3
+        {
+            font-size: 2.5vh;
+        }
+        p
+        {
+            display: inline-block;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="index_form.php" method="post" enctype="multipart/form-data">
+        <div class="main">
+        <h3>Formularz zgłoszeniowy</h3>
+        <fieldset>
+            <legend>Dane kandydata</legend>
+        <p id="t1">Imie:</p> <input type="text" name="imie"><br>
+        <p>Nazwisko:</p> <input type="text" name="nazwisko"><br>
+        <p id="t2">Wiek:</p> <input type="number" name="wiek"><br><br>
+        <p>Wykształcenie</p><br>
+        <input type="radio" name="wyksztalcenie" value="Podstawowe">Podstawowe</input>
+        <input type="radio" name="wyksztalcenie" value="Średnie">Średnie</input>
+        <input type="radio" name="wyksztalcenie" value="Wyższe">Wyższe</input>
+        <br><br>
+        <p>Wybór języka</p><br>
+        <select name="języki[]" multiple>
+        <option value="Język angielski">Język angielski</option>
+        <option value="Język niemiecki">Język niemiecki</option>
+        <option value="Język francuski">Język francuski</option>
+        <option value="Język włoski">Język włoski</option>
+        <option value="Język hiszpański">Język hiszpański</option>
+        <option value="Język rosyjski">Język rosyjski</option>
+        </select><br><br>
+        <input type='hidden' name='max_file_size' value='107374182400'>
+        <p>Dodaj załącznik: </p><br>
+        <input type="file" name="plik1">
+    </fieldset><br><br>
+        <input type="checkbox" name="zgoda" value="Wyrażam zgodę na przetwarzanie moich danych osobowych.">Wyrażam zgodę na przetwarzanie moich danych osobowych.</input>
+        <br><br>
+        <button type="submit">Wyślij</button>
+        <button type="reset">Wyczyść</button>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>
