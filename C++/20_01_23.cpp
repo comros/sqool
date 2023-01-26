@@ -78,7 +78,7 @@ int main()
         CP A(20), B, C(10);
         A = B = C;
 
-        A = A
+        A = A;
 
         cout << CP::nCount << endl;
 

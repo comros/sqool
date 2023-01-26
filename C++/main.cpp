@@ -1,6 +1,6 @@
 #include <iostream>
-
-using namespace std;
+// Można skompilować za pomocą komendy g++ [nazwa_pliku].cpp, a następnie odpalić za pomocą .\a.exe (chyba, że nadano inną nazwe)
+using namespace std; 
 
 class Ulamek
 {
