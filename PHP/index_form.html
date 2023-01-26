@@ -35,6 +35,11 @@
             border: 0;
             padding: 0;
         }
+        p#wymagane
+        {
+            color: white;
+            vertical-align: super;
+        }
     </style>
 </head>
 <body>
@@ -43,9 +48,9 @@
         <h3>Formularz zgłoszeniowy</h3>
         <fieldset>
             <legend>Dane kandydata</legend>
-        <p id="t1">Imie:</p> <input type="text" name="imie"><br>
-        <p>Nazwisko:</p> <input type="text" name="nazwisko"><br>
-        <p id="t2">Wiek:</p> <input type="number" name="wiek"><br><br>
+        <p id="t1">Imie:</p> <input type="text" name="imie"><p id="wymagane">*</p><br>
+        <p>Nazwisko:</p> <input type="text" name="nazwisko"><p id="wymagane">*</p><br>
+        <p id="t2">Wiek:</p> <input type="number" name="wiek"><p id="wymagane">*</p><br><br>
         <p>Wykształcenie</p><br>
         <input type="radio" name="wyksztalcenie" value="Podstawowe">Podstawowe</input>
         <input type="radio" name="wyksztalcenie" value="Średnie">Średnie</input>
@@ -62,7 +67,8 @@
         </select><br><br>
         <input type='hidden' name='max_file_size' value='107374182400'>
         <p>Dodaj załącznik: </p><br>
-        <input type="file" name="plik1">
+        <input type="file" name="plik1"><br>
+        <br><p style="font-size: 10pt;">* - pole wyamagne</p>
     </fieldset><br><br>
         <input type="checkbox" name="zgoda" value="Wyrażam zgodę na przetwarzanie moich danych osobowych.">Wyrażam zgodę na przetwarzanie moich danych osobowych.</input>
         <br><br>
