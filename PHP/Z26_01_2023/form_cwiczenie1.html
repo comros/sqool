@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>Formularz aplikacyjny</title>
+<meta charset = "utf8" />
+<style type="text/css">
+p {
+font-size:4; 
+font-weight:bold
+}
+</style>
+</head>
+<body>
+<form action="skrypt_cwiczenie1.php" method="post" enctype="multipart/form-data">
+
+<p>Formularz aplikacyjny</p>	
+Nazwisko:<br />
+<input type="text" name="nazw" value=" " size="30"><br />
+Imię:<br />
+<input type="text" name="imie" value=" " size="30"><br />
+Zawód:<br />
+<input type="text" name="zaw" value=" " size="30"><br/>	
+Adres e-mail:<br />
+<input type="text" name="adr" value=" " size="30"><br />	
+
+<p>Wykształcenie</p>
+<input type="radio" name="wykszt" value="podst">Podstawowe<br />		
+<input type="radio" name="wykszt" value="srednie">Średnie<br />
+<input type="radio" name="wykszt" value="wyzsze">Wyższe<br />
+
+<p>Dodatkowe uprawnienia</p>
+<select name="uprawnienia[]" multiple="multiple">
+<option>certyfikat językowy</option>
+<option>prawo jazdy</option>
+<option>kurs kwalifikacyjny</option>
+<option>kurs trenerski</option>
+<option>certyfikat umiejętności</option>
+</select>
+</br>
+
+<input type="hidden" name="max_file_size" value="40">
+<p>Wyślij plik</p>	<br />	
+<input type="file" name="plik1" size="30"></p>
+
+<input type="checkbox" name="opcje" maxlength="1">Zgadzam się na przetwarzanie moich danych osobowych<br /><br />
+
+<input type="submit" value="Wyślij" name="wyslij">&nbsp; &nbsp;	
+<input type="reset" value="Wyczyść" name="zeruj">
+</form>
+</body>
+</html>
