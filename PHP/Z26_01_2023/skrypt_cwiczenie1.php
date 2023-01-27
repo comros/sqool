@@ -19,7 +19,7 @@ if(!empty($_POST['uprawnienia'])) {
 	echo "</ul>";
 }
 else {
-	echo "<p>".$_POST['nazw']." nie zna żadnego języka.<p>";
+	echo "<p>".$_POST['nazw']." nie posiada dodatkowych uprawnień.<p>";
 }
 echo "<br />";
 
