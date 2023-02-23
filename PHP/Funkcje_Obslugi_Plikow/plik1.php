@@ -40,3 +40,46 @@ echo $id_pliku."<br>";
 
 // Zamykanie pliku
 fclose($id_pliku);
+
+/* ODCZYTANIE ZAWARTOŚCI PLIKU:
+
+Wybrane funkcje odczytujące zawartość pliku
+* funkcje wyamagjące wcześniejszego otwarcia pliku
+    - fread()
+    - fgets()
+    - fgetc()
+* nie wymagające wcześniejszego otwarcia liku
+    - readfile()
+    - file_get_contents()
+    - file()
+*/
+
+// Zwraca odczytany fragment w postaci ciągu znaków
+fread($id_pliku, 40);
+
+// Odczytuje zawartość wiersz po wierszu
+echo fgets($id_pliku);
+
+while(!feof($id_pliku)) {
+    $t = fgets($id_pliku); // zwraca ciąg znaków
+    echo $t."<br>";
+}
+fclose($id_pliku);
+
+// Odczytuje zawartosc i wysyla do przegladrki
+readfile('twstowanie.txt');
+
+// Odczytuje zawartosc pliku i zwraca ciag znakow
+echo file_get_contents('testowanie.txt');
+
+// Odczytuje zawartosc i zwraca tablice
+$tab = file('testowanie.txt');
+echo $tab[0]."<br>";
+
+foreach($tab as $w) {
+    echo $w."<br>";
+}
+
+// Zapis zawartości do pliku - fwrite()
+$id1_pliku = fopen('test1.txt', 'w');
+fwrite($id1_pliku, 'technik informatyk');
