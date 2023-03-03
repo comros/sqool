@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        #kursor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border: solid 1px #c3c3c3;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="kursor"></div>
+    <script>
+        var isMoving = false;
+        $(document).ready(function() {
+
+            $(document).mousemove(function(e){
+                console.log('X: ' + e.pageX + ', Y: ' + e.pageY + ' | isMoving = ' + isMoving + ' | id: ' + e.target.id);
+                if(isMoving) $('#kursor').css('top', e.pageY-50).css('left', e.pageX-50);
+            });
+
+            $(this).mousedown(function(e){
+                if(isMoving == false && e.target.id) 
+                { 
+                    isMoving = true; 
+                }
+            });
+            $(this).mouseup(function(e) {
+                if(isMoving == true && e.target.id) 
+                { 
+                    isMoving = false;
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
