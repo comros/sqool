@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        body
+        {
+            display: inline-block;
+        }
+        #diva
+        {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id='diva'></div>
+    <script>
+        $(document).bind("contextmenu", function(e) { return false; });
+        $(document).ready(function() {
+            $('#diva').click(function() {
+                $(this).animate({
+                    left: Math.random() * 500 + 'px',
+                    height: '+=100px',
+                    width: '+=100px'
+                }, 60);
+            }).contextmenu(function() {
+                    $(this).animate({
+                    left: Math.random() + 'px',
+                    height: '-=100px',
+                    width: '-=100px'
+                }, 60);
+            });
+        });
+    </script>
+</body>
+</html>
