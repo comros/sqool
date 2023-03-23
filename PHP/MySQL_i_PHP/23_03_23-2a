@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>MySQL i PHP</title>
+</head>
+<body>
+    <h3>Dodaj znajomego</h3>
+    <form action="zadanka.php" method="post">
+        <label>Imie<input type="text" name="im"></label><br>
+        <label>Nazwisko<input type="text" name="nazw"></label><br>
+        <label>Data Urodzenia<input type="date" name="data"></label><br>
+        <label>Wiek<input type="number" name="wiek"></label><br>
+
+        <br><input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>
