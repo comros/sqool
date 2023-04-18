@@ -11,3 +11,9 @@ npm install tsd -g
 npm install typings --global
 typings install dt~jquery --global
 ```
+
+na koniec trzeba dodać na górze skryptu
+```
+/// <reference path="./typings/globals/jquery/index.d.ts"/>
+```
+i powinno zadziałac
