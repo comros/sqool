@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Proceduralne tworzenie bazy i dodawanie danych</title>
+</head>
+<body>
+    <h3>Dodaj znajomego</h3>
+    <form action="mysqli.php" method="post">
+        <span>
+            Przyklady: <br>
+            Interstellar, Christopher Nolan, 2014 <br>
+            Joker, Todd Phillips, 2019 <br>
+            John Wick 4, Chad Stahelski, 2023 <br> <br>
+        </span>
+
+        <label>Tytul:<input type="text" name="tytul"></label>
+        <label>Autor:<input type="text" name="autor"></label>
+        <label>Rok Produckji:<input type="text" name="rok_produkcji"></label>
+
+        <input type="submit" value="Dodaj">
+    </form>
+</body>
+</html>
