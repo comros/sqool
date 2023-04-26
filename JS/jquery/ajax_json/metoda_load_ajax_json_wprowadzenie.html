@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            border: 0;
+            padding: 0;
+
+            background-color: #181818;
+            color: whitesmoke;
+
+            font-family: consolas;
+        }
+        
+        p {
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        span {
+            display: inline-block;
+            position: relative;
+            float: left;
+        }
+
+        .ramka {
+            width: 90px;
+            height: 90px;
+            border: 5px solid whitesmoke;
+        }
+
+        .load-button {
+            width: 80px;
+            height: 80px;
+
+            border: 5px solid #181818;
+
+            background-color: whitesmoke;
+            color: black;
+
+            text-align: center;
+        }
+        .load-container {
+            width: 168px;
+            height: 84px;
+
+            border: 8px dashed whitesmoke;
+
+            text-align: center;
+        }
+
+        br {
+            margin: 45px;
+        }
+    </style>
+</head>
+<body>
+    <span class="ramka"><span class="load-button" id="metoda_load_button"><p>Metoda Load</p></span></span>
+    <span class="load-container" id="metoda_load_container"></span> <br>
+    <span class="ramka"><span class="load-button" id="ajax-json-button-1"><p>Ajax Json 1</p></span></span>
+    <span class="load-container" id="ajax-json-container-1"></span> <br>
+    <span class="ramka"><span class="load-button" id="ajax-json-button-2"><p>Ajax Json 2</p></span></span>
+    <span class="load-container" id="ajax-json-container-2"></span> 
+    <script>
+        /// <reference path="./typings/globals/jquery/index.d.ts"/>
+
+        // #1. Otworzyć w VSCode jako folder
+        // #2. Pobrać Live Server z rozszerzeń (jeżeli nie ma) i odpalić: F1 > 'Live Server: Open with Live Server'
+        // Inczej nie zadziała 
+
+        $(document).ready(function() 
+        {
+            // METODA LOAD -------------------------------------------------------------------
+            $('#metoda_load_button').on('mousedown',function() 
+            {
+                $(this).css('background-color', '#181818')
+                // metoda load() - składnia
+                // $(selector).load(URL, data, callback);
+
+                $('#metoda_load_container').load('./tekst.txt', function(responseTxt, statusTxt, xhr) 
+                {
+                    console.log(`Loading status: ${statusTxt}`);
+                
+                    /*
+                    responseTxt - contains the result content if the call succeeds
+                    statusTxt - contains the status of the call
+                    xhr - contains the XMLHttpRequest object
+                    */
+                });
+            }).on('mouseup',function() {$(this).css('background-color', 'whitesmoke')});
+            // METODA LOAD -------------------------------------------------------------------
+
+
+            // AJAX JSON 1 -------------------------------------------------------------------
+            $('#ajax-json-button-1').on('mousedown',function() 
+            {
+                $(this).css('background-color', '#181818')            
+
+                $.ajax("dane.json", {
+                    success: function(data) {
+                        $("#ajax-json-container-1").text(data.nazwisko);
+                    }
+                });
+            }).on('mouseup',function() {$(this).css('background-color', 'whitesmoke')});
+            // AJAX JSON 1 -------------------------------------------------------------------
+
+
+            // AJAX JSON 2 -------------------------------------------------------------------
+            $('#ajax-json-button-2').on('mousedown',function() 
+            {
+                $(this).css('background-color', '#181818');
+
+                $.ajax({
+                    url: "dane.json",
+                    dataType: 'json',
+            
+                    success: function(data) {
+                        $("#ajax-json-container-2").html(`${data.nazwisko}, ${data.imie}`);
+                    }
+                })
+
+            }).on('mouseup',function() {$(this).css('background-color', 'whitesmoke')});
+            // AJAX JSON 2 -------------------------------------------------------------------
+        });
+    </script>
+</body>
+</html>
