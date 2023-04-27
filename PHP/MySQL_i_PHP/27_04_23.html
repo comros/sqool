@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie1</title>
+    <style>
+        html 
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body
+        {
+            background-color: tan;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="./zgloszenie.php" method="post">
+        <h2>Dodaj nowe zgłoszenie</h2>
+        Numer zespołu ratowniczego:<br><input type="number" name="nr_zesp"><br>
+        Numer dyspozytora:<br><input type="number" name="nr_dysp"><br>
+        Adres:<br><input type="text" size="100" name="adres"><br>
+        <button type="reset">WYCZYŚĆ</button>
+        <button type="submit">ZGŁOŚ</button>
+    </form>
+</body>
+</html>
