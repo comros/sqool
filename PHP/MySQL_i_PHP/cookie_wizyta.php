@@ -17,7 +17,7 @@
 $ciasteczko = setcookie("wizyta", date('F d h:i A'), time() + 3600);
 
 // Sprawdzenie czy ciastko zostało przesłane
-if($ciasteczko) 
+if(isset($_COOKIE['wizyta'])) 
 {
     echo "Witamy ponownie! Ostatni raz odwiedziłeś nas: <b>".$_COOKIE["wizyta"].'</b> <br>';
 }
