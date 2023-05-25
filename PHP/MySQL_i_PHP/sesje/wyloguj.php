@@ -13,5 +13,5 @@ else
 }
 
 session_destroy();
-echo "<p style='font-size: 32px;'>Zostałeś wylogowany!</p>";
+echo "<p style='font-size: 16px;'>Zostałeś wylogowany!</p>";
 ?>
