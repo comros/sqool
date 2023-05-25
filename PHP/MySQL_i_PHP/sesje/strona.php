@@ -22,7 +22,7 @@ if(!isset($_SESSION['log']))
 }
 else
 {
-    echo "<p style='font-size:16px;'>Witaj na stronie".$_SESSION['log']."</p>";
+    echo "<p style='font-size:16px;'>Witaj na stronie <b>".$_SESSION['log']."</b></p>";
 }
 
 ?>
