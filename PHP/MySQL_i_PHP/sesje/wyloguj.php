@@ -1,0 +1,17 @@
+<?php
+
+session_start();
+
+// Usuwanie zmiennej sesji
+if(isset($_SESSION['log']))
+{
+    unset($_SESSION['log']);
+}
+else
+{
+    header('location: zaloguj.php');
+}
+
+session_destroy();
+echo "<p style='font-size: 32px;'>Zostałeś wylogowany!</p>";
+?>
