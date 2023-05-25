@@ -22,8 +22,8 @@
 <body>
     <!--Aby skrypt PHP się wykonał trzeba jeszcze raz załadować stronę, dlatego action='zaloguj.php'-->
     <form action="zaloguj.php" method="post">
-        <label for="login">Login: <input type="text" id="login"></label><br>
-        <label for="haslo">Haslo: <input type="password" id="haslo"></label><br>
+        <label for="login">Login: <input type="text" name="login"></label><br>
+        <label for="haslo">Haslo: <input type="password" name="haslo"></label><br>
         <button type="submit">Zaloguj</button>
     </form>
 </body>
