@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <nav></nav>
+        </header>
+        <aside id="as1">
+            <article id="a1"></article>
+        </aside>
+        <main>
+            <form action="" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Rejestracja</legend>
+                    <label for="imie">Imie<input type="text"></label><br>
+                    <label for="nazwisko">Nazwisko<input type="text"></label><br>
+                    <label for="data_ur">Data urodzenia<input type="date"></label><br>
+                    <label for="email">Adres Email<input type="email"></label><br>
+                    <label for="plec">Płeć<br><input type="radio" value="k">K<input type="radio" value="m">M</label><br>
+                    <label for="wyksztalcenie">
+                        Wykształcenie <br>
+                        <select name="wyksztalcenie" id="wyksztalcenie">
+                            <option value="informatyk">Informatyk</option>
+                            <option value="mechanik">Mechanik</option>
+                            <option value="elektronik">Elektronik</option>
+                        </select>
+                    </label><br>
+                    <fieldset id="zainteresowania">
+                        <legend>Zainteresowania</legend>
+                        <input type="checkbox" name="film" id="film">Film
+                        <input type="checkbox" name="komputery" id="komputery">Komputery <br>
+                        <input type="checkbox" name="muzyka" id="muzyka">Muzyka
+                        <input type="checkbox" name="podróże" id="podróże">Podróże
+                    </fieldset><br>
+                    <input type='hidden' name='max_file_size' value='107374182400'>
+                    Zdjęcie: <br>
+                    <input type="file" name="plik1"><br><br>
+                    <input type="image" src="" alt="">
+                    <button type="submit">Rejestruj</button>
+                    <button type="reset">Wyczyść</button>
+                </fieldset>
+            </form>
+        </main>
+        <aside id="as1">
+            <article id="a2">
+            
+            </article>
+            <article id="a3">
+                
+            </article>
+        </aside>
+        <article id="a4"></article>
+        <footer></footer>
+    </section>
+</body>
+</html>
