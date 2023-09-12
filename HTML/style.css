@@ -1,0 +1,79 @@
+header
+{
+    width: 100%;
+    height: 250px;
+    background-color: dodgerblue;
+    clear: both;
+}
+
+nav
+{
+    width: 95%;
+    height: 50px;
+    background-color: lightblue;
+    margin-left: 2.5%;
+    position: relative;
+    top: 70%;
+}
+
+#as1, #as2
+{
+    position: relative;
+    height: 565px;
+    width: 15%;
+    background-color: gray;
+    float: left;
+}
+
+#a1, #a2, #a3, #a4
+{
+    position: relative;
+    background-color: blanchedalmond;
+}
+
+
+main
+{
+    position: relative;
+    width: 70%;
+    height: 565px;
+    background-color: green;
+    float: left;
+
+}
+
+#a1, #a2, #a3
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 15%;
+}
+
+#a1
+{
+    margin-top: 25px;
+}
+
+#a2
+{
+    margin-top: 15px;
+}
+
+#a3
+{
+    margin-top: 50px;
+}
+
+#a4
+{
+    width: 100%;
+    height: 200px;
+    margin-top: 565px;
+}
+
+footer
+{
+    width: 100%;
+    height: 50px;
+    background-color: plum;
+}
